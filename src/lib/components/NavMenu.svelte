@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { join } from '$lib/utils';
-	import NavHamburger from './NavHamburger.svelte';
-	import NavLogo from './NavLogo.svelte';
+	import NavHamburger from '../icons/NavHamburger.svelte';
+	import NavLogo from '../icons/NavLogo.svelte';
 
 	let showMenu = false;
 </script>
@@ -23,13 +23,10 @@
 				)}
 			>
 				<li class="border-b border-b-surface-300 sm:border-none">
-					<a href="/" class="block w-full p-2 font-semibold">about</a>
+					<a href="#about" class="block w-full p-2 font-semibold">about</a>
 				</li>
 				<li class="border-b border-b-surface-300 sm:border-none">
-					<a href="/" class="block w-full p-2 font-semibold">about</a>
-				</li>
-				<li>
-					<a href="/" class="block w-full p-2 font-semibold">about</a>
+					<a href="#projects" class="block w-full p-2 font-semibold">projects</a>
 				</li>
 			</ul>
 		</div>

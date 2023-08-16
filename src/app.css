@@ -4,14 +4,46 @@
 
 @layer components {
 	.h1 {
-		@apply text-3xl font-bold sm:text-4xl md:text-5xl;
+		@apply text-3xl font-bold sm:text-4xl lg:text-5xl;
 	}
 
 	.h2 {
-		@apply text-xl font-bold sm:text-2xl md:text-3xl;
+		@apply text-xl font-bold sm:text-2xl md:text-4xl;
+	}
+
+	.h3 {
+		@apply text-lg font-bold sm:text-xl md:text-3xl;
 	}
 
 	.centered {
-		@apply max-w-screen-xl px-4 mx-auto sm:px-8;
+		@apply max-w-screen-xl px-6 mx-auto sm:px-8;
 	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-repeat: no-repeat;
+	background-image: radial-gradient(
+			ellipse at 0% 0%,
+			hsl(324.88deg 70% 77.42% / 78.42%) 0%,
+			hsl(0deg 0% 0% / 0%) 50%
+		),
+		radial-gradient(
+			ellipse at 100% 0%,
+			hsl(260.67deg 66.8% 68% / 100%) 0%,
+			hsl(0deg 0% 0% / 0%) 50%
+		),
+		radial-gradient(
+			ellipse at 0% 58.13%,
+			hsl(301.07deg 70% 86.24% / 80.82%) 0%,
+			hsl(0deg 0% 0% / 0%) 50%
+		),
+		radial-gradient(
+			ellipse at 91.1% 100%,
+			hsl(206.56deg 79.42% 79.62% / 87.64%) 0%,
+			hsl(0deg 0% 0% / 0%) 50%
+		);
 }

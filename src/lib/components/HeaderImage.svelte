@@ -2,26 +2,57 @@
 	import { onMount } from 'svelte';
 	import { spring } from 'svelte/motion';
 
+	let start = false;
+	let timeout: number | undefined;
+
 	let storeX = spring(0, { stiffness: 0.2, damping: 0.9 });
 	let storeY = spring(0, { stiffness: 0.2, damping: 0.5 });
 
 	onMount(() => {
+		const header = document.getElementById('header');
+
+		const mouseEnterHandler = () => {
+			timeout = setTimeout(() => (start = true), 200);
+		};
+
 		const mouseMoveHandler = (e: MouseEvent) => {
+			if (!start) {
+				// the mouse didn't enter but is already inside section
+				if (timeout === undefined) {
+					start = true;
+				} else {
+					return;
+				}
+			}
 			const x = Math.min(e.clientX / window.innerWidth, 1) - 0.5;
 			const y = Math.min(e.clientY / window.innerHeight, 1) - 0.5;
 			storeX.update(() => x);
 			storeY.update(() => y);
 		};
 
-		document.addEventListener('mousemove', mouseMoveHandler);
-		return () => document.removeEventListener('mousemove', mouseMoveHandler);
+		const mouseLeaveHandler = () => {
+			clearTimeout(timeout);
+			start = false;
+			timeout = undefined;
+			storeX.update(() => 0);
+			storeY.update(() => 0);
+		};
+
+		header?.addEventListener('mouseenter', mouseEnterHandler);
+		header?.addEventListener('mousemove', mouseMoveHandler);
+		header?.addEventListener('mouseleave', mouseLeaveHandler);
+		return () => {
+			header?.removeEventListener('mouseenter', mouseEnterHandler);
+			header?.removeEventListener('mousemove', mouseMoveHandler);
+			header?.removeEventListener('mouseleave', mouseLeaveHandler);
+		};
 	});
-
-	const getTranslate = (x: number, y: number) => `transform: translate(${x}px, ${y}px);`;
-
-	$: box1 = getTranslate(Math.min($storeX * 10, 10), Math.min($storeY * 12, 12));
-	$: box2 = getTranslate(Math.min($storeX * 20, 20), Math.min($storeY * 20, 20));
-	$: box3 = getTranslate(Math.min($storeX * 30, 30), Math.min($storeY * 30, 30));
+  
+	const translate = (x: number, y: number, maxX: number, maxY: number) =>
+		`transform: translate(min(${x * maxX}px, ${maxX / 2}px), min(${maxY * y}px, ${maxY / 2}px));`;
+	$: box1 = translate($storeX, $storeY, 10, 6);
+	$: box2 = translate($storeX, $storeY, 20, 7);
+	$: box3 = translate($storeX, $storeY, 30, 8);
 </script>
 
 <svg viewBox="0 0 206 163" fill="none" xmlns="http://www.w3.org/2000/svg">
