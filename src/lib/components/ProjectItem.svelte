@@ -6,9 +6,13 @@
 </script>
 
 <li class="w-full overflow-hidden border rounded-lg border-surface-800">
-	<div class="h-8 md:h-10 bg-primary-500" />
+	<div class="flex items-center h-8 gap-2 pl-5 md:h-10 bg-primary-500">
+    <div class="w-3 border rounded-full aspect-square border-surface-900 bg-surface-200"></div>
+    <div class="w-3 border rounded-full aspect-square border-surface-900 bg-surface-200"></div>
+    <div class="w-3 border rounded-full aspect-square border-surface-900 bg-surface-200"></div>
+  </div>
 	<div class="flex flex-col-reverse justify-between gap-4 p-4 md:flex-row md:p-6 lg:p-8 bg-surface-100">
-		<div class="mx-auto space-y-4 md:max-w-sm lg:max-w-xl xl:max-w-2xl">
+		<div class="mx-auto space-y-4 md:max-w-sm lg:max-w-xl xl:max-w-2xl md:mx-0">
 			<h3 class="h3">
 				<slot name="title" />
 			</h3>
@@ -32,7 +36,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="w-full max-w-sm">
+		<div class="w-full md:max-w-sm">
 			<img class="w-full border rounded-lg border-surface-800" alt={imgAlt} src={imgUrl} />
 		</div>
 	</div>

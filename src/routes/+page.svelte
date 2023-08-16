@@ -50,7 +50,7 @@
 
 <section id="projects">
 	<div class="py-20 centered">
-		<h2 class="mb-6 text-center h2">Projects</h2>
+		<h2 class="mb-8 text-center h2">Featured Projects</h2>
 		<ul class="space-y-6">
 			<ProjectItem
 				imgUrl="/proj1.jpg"
@@ -69,7 +69,7 @@
 			</ProjectItem>
 			<ProjectItem
 				imgUrl="/proj2.jpg"
-				imgAlt="react-polymorphed package logo"
+				imgAlt="a screenshot of the gradials website"
 				firstLink="https://github.com/nasheomirro/gradials"
 				secondLink="https://gradials.vercel.app/"
 			>
@@ -80,6 +80,20 @@
 					only built this just to test myself whether or not I could replicate the tool on
 					cssgradient.io, they didn't have a way to create multiple radial gradients at different
 					positions so that's what I went with.
+				</svelte:fragment>
+				<svelte:fragment slot="second-button">live</svelte:fragment>
+			</ProjectItem>
+			<ProjectItem
+				imgUrl="/proj3.jpg"
+				imgAlt="a screenshot of the kanban app"
+				firstLink="https://github.com/nasheomirro/kanban"
+				secondLink="https://kanban-sand.vercel.app/"
+			>
+				<svelte:fragment slot="title">kanban</svelte:fragment>
+				<svelte:fragment slot="description">
+					A kanban board with sveltekit bootstrapped with skeleton! I wanted some place I can organize my tasks so
+					I landed on kanban boards, unfortunately I couldn't find any existing apps that were
+					to my liking, fortunately though I can make one myself 😊.
 				</svelte:fragment>
 				<svelte:fragment slot="second-button">live</svelte:fragment>
 			</ProjectItem>
