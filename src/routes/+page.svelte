@@ -91,9 +91,9 @@
 			>
 				<svelte:fragment slot="title">kanban</svelte:fragment>
 				<svelte:fragment slot="description">
-					A kanban board with sveltekit bootstrapped with skeleton! I wanted some place I can organize my tasks so
-					I landed on kanban boards, unfortunately I couldn't find any existing apps that were
-					to my liking, fortunately though I can make one myself 😊.
+					A kanban board with sveltekit bootstrapped with skeleton! I wanted some place I can
+					organize my tasks so I landed on kanban boards, unfortunately I couldn't find any existing
+					apps that were to my liking, fortunately though I can make one myself 😊.
 				</svelte:fragment>
 				<svelte:fragment slot="second-button">live</svelte:fragment>
 			</ProjectItem>
