@@ -61,7 +61,7 @@
 				<svelte:fragment slot="title">react-polymorphed</svelte:fragment>
 				<svelte:fragment slot="description">
 					A typescript package to easily create fast polymorphic components in react! The package is
-					open-source and downloadable through NPM and gets an average of 700+ weekly downloads. I
+					open-source and downloadable through NPM and gets an average of 800+ weekly downloads. I
 					wanted to create polymorphic components for a project but a lot of implementations felt
 					too slow, so I tried solving the problem and created my own solution.
 				</svelte:fragment>
@@ -70,16 +70,15 @@
 			<ProjectItem
 				imgUrl="/proj2.jpg"
 				imgAlt="a screenshot of the gradials website"
-				firstLink="https://github.com/nasheomirro/gradials"
-				secondLink="https://gradials.vercel.app/"
+				firstLink="https://github.com/nasheomirro/gradials-2"
+				secondLink="https://gradials-2.pages.dev/"
 			>
 				<svelte:fragment slot="title">gradials</svelte:fragment>
 				<svelte:fragment slot="description">
-					A tool to quickly create radial gradient backgrounds for CSS. Built using sveltekit, it
-					takes advantage of two-way binding to help sync updates in multiple places. Honestly I
-					only built this just to test myself whether or not I could replicate the tool on
-					cssgradient.io, they didn't have a way to create multiple radial gradients at different
-					positions so that's what I went with.
+					A web application to quickly create radial gradient backgrounds for CSS. Just add and
+					customize gradients and instantly get visual feedback, after you're satisfied with how it
+					looks you can copy the CSS generated and paste it on your own website. Fun fact this is
+					the same tool I used to create the background you are looking at now.
 				</svelte:fragment>
 				<svelte:fragment slot="second-button">live</svelte:fragment>
 			</ProjectItem>
@@ -91,7 +90,7 @@
 			>
 				<svelte:fragment slot="title">kanban</svelte:fragment>
 				<svelte:fragment slot="description">
-					A kanban board with sveltekit bootstrapped with skeleton! I wanted some place I can
+					A kanban board with sveltekit bootstrapped with skeleton UI! I wanted some place I can
 					organize my tasks so I landed on kanban boards, unfortunately I couldn't find any existing
 					apps that were to my liking, fortunately though I can make one myself 😊.
 				</svelte:fragment>

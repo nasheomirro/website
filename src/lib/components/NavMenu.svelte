@@ -23,10 +23,18 @@
 				)}
 			>
 				<li class="border-b border-b-surface-300 sm:border-none">
-					<a href="#about" class="block w-full p-2 font-semibold">about</a>
+					<a
+						href="#about"
+						on:click={() => (showMenu = !showMenu)}
+						class="block w-full p-2 font-semibold">about</a
+					>
 				</li>
 				<li class="border-b border-b-surface-300 sm:border-none">
-					<a href="#projects" class="block w-full p-2 font-semibold">projects</a>
+					<a
+						href="#projects"
+						on:click={() => (showMenu = !showMenu)}
+						class="block w-full p-2 font-semibold">projects</a
+					>
 				</li>
 			</ul>
 		</div>
