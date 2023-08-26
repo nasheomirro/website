@@ -18,6 +18,13 @@
 	.centered {
 		@apply max-w-screen-xl px-6 mx-auto sm:px-8;
 	}
+
+	.button {
+		@apply px-4 flex items-center gap-2 py-1.5 font-semibold border rounded-full hover:brightness-110 border-surface-800 relative overflow-hidden;
+	}
+	.button {
+		@apply after:absolute after:w-full after:left-0 after:top-0 after:h-full after:bg-opacity-10 after:bg-white after:translate-x-full hover:after:translate-x-0 after:transition-transform;
+	}
 }
 
 html {
