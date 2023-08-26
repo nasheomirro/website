@@ -27,9 +27,28 @@
 	}
 }
 
+@layer utilities {
+	.before-visible-left {
+		@apply -translate-x-10 opacity-0;
+	}
+
+	.before-visible-right {
+		@apply translate-x-10 opacity-0;
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 }
+
+/* TODO */
+/* ::-webkit-scrollbar-thumb {
+  @apply bg-surface-600 rounded-full;
+}
+
+::-webkit-scrollbar {
+  @apply bg-surface-300;
+} */
 
 body {
 	background-repeat: no-repeat;

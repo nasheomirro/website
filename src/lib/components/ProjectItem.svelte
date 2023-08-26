@@ -7,7 +7,7 @@
 	export let imgAlt: string;
 </script>
 
-<li class="w-full overflow-hidden border rounded-lg border-surface-800">
+<li data-animate-in class="before-visible-left transition w-full overflow-hidden border rounded-lg border-surface-800">
 	<div class="flex items-center h-8 gap-2 pl-5 md:h-10 bg-surface-400">
 		<div class="w-3 border rounded-full aspect-square border-surface-900 bg-surface-200" />
 		<div class="w-3 border rounded-full aspect-square border-surface-900 bg-surface-200" />

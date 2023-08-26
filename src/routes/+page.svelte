@@ -6,6 +6,25 @@
 	import Github from '$lib/icons/Github.svelte';
 	import Linkedin from '$lib/icons/Linkedin.svelte';
 	import Dev from '$lib/icons/Dev.svelte';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const elements = document.querySelectorAll('[data-animate-in]');
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.remove('before-visible-left', 'before-visible-right');
+					}
+				});
+			},
+			{ threshold: [0.5] }
+		);
+
+		elements.forEach((element) => {
+			observer.observe(element);
+		});
+	});
 </script>
 
 <section id="header">
@@ -14,12 +33,22 @@
 		<div class="grid items-center grid-cols-1 gap-4 sm:px-4 md:grid-cols-2">
 			<div class="max-w-xs row-start-2 sm:max-w-sm md:row-start-1">
 				<h1 class="mb-8 h1">Hi, I'm Shane Rimoro, A Web Developer</h1>
-				<p>
+				<p class="mb-5">
 					I convert time, energy, and a little bit of caffeine into responsive and fully functioning
 					web applications.
 				</p>
+				<a
+					href="https://github.com/nasheomirro"
+					target="_blank"
+					class="button bg-surface-900 text-white pl-2 max-w-fit"
+				>
+					<div class="w-6">
+						<Github />
+					</div>
+					<span> Check My Github </span>
+				</a>
 			</div>
-			<div class="flex justify-end">
+			<div data-animate-in class="before-visible-right transition duration-300 flex justify-end">
 				<div class="max-w-md grow text-primary-500 md:max-w-none">
 					<HeaderImage />
 				</div>
@@ -31,7 +60,7 @@
 <section id="about">
 	<div class="py-20 md:py-28 centered">
 		<div class="grid items-center grid-cols-1 gap-10 sm:px-4 md:grid-cols-2">
-			<div class="flex justify-end md:justify-start">
+			<div data-animate-in class="before-visible-left transition duration-300 flex justify-end md:justify-start">
 				<div class="max-w-md xl:max-w-lg grow">
 					<AboutImage />
 				</div>
