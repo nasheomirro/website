@@ -60,7 +60,10 @@
 <section id="about">
 	<div class="py-20 md:py-28 centered">
 		<div class="grid items-center grid-cols-1 gap-10 sm:px-4 md:grid-cols-2">
-			<div data-animate-in class="before-visible-left transition duration-300 flex justify-end md:justify-start">
+			<div
+				data-animate-in
+				class="before-visible-left transition duration-300 flex justify-end md:justify-start"
+			>
 				<div class="max-w-md xl:max-w-lg grow">
 					<AboutImage />
 				</div>
@@ -86,6 +89,7 @@
 				imgAlt="react-polymorphed package logo"
 				firstLink="https://github.com/nasheomirro/react-polymorphed"
 				secondLink="https://www.npmjs.com/package/react-polymorphed"
+				animateClass="before-visible-left"
 			>
 				<svelte:fragment slot="title">react-polymorphed</svelte:fragment>
 				<svelte:fragment slot="description">
@@ -101,6 +105,7 @@
 				imgAlt="a screenshot of the gradials website"
 				firstLink="https://github.com/nasheomirro/gradials-2"
 				secondLink="https://gradials-2.pages.dev/"
+				animateClass="before-visible-right"
 			>
 				<svelte:fragment slot="title">gradials</svelte:fragment>
 				<svelte:fragment slot="description">
@@ -116,6 +121,7 @@
 				imgAlt="a screenshot of the kanban app"
 				firstLink="https://github.com/nasheomirro/kanban"
 				secondLink="https://kanban-sand.vercel.app/"
+				animateClass="before-visible-left"
 			>
 				<svelte:fragment slot="title">kanban</svelte:fragment>
 				<svelte:fragment slot="description">

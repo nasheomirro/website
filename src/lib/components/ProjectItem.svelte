@@ -5,9 +5,13 @@
 	export let secondLink: string;
 	export let imgUrl: string;
 	export let imgAlt: string;
+	export let animateClass: string;
 </script>
 
-<li data-animate-in class="before-visible-left transition w-full overflow-hidden border rounded-lg border-surface-800">
+<li
+	data-animate-in
+	class={`${animateClass} transition w-full overflow-hidden border rounded-lg border-surface-800`}
+>
 	<div class="flex items-center h-8 gap-2 pl-5 md:h-10 bg-surface-400">
 		<div class="w-3 border rounded-full aspect-square border-surface-900 bg-surface-200" />
 		<div class="w-3 border rounded-full aspect-square border-surface-900 bg-surface-200" />
@@ -26,8 +30,8 @@
 			<div class="flex justify-end gap-2 md:justify-start">
 				<a href={firstLink} target="_blank" class="button bg-surface-900 text-white pl-2">
 					<div class="w-6">
-            <Github />
-          </div>
+						<Github />
+					</div>
 					<span> github </span>
 				</a>
 				<a href={secondLink} target="_blank" class="button bg-primary-500"
