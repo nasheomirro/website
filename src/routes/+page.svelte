@@ -68,7 +68,7 @@
 					<AboutImage />
 				</div>
 			</div>
-			<div class="max-w-lg row-start-2 md:mx-auto md:row-start-1 md:col-start-2">
+			<div class="max-w-md md:max-w-lg row-start-2 md:mx-auto md:row-start-1 md:col-start-2">
 				<h1 class="mb-8 h2">About me</h1>
 				<p>
 					I am a web developer based in the Philippines, I started teaching myself how to code
@@ -135,7 +135,7 @@
 	</div>
 </section>
 
-<div class="flex flex-wrap items-center justify-center pb-8">
+<div class="flex flex-wrap items-center justify-center pb-4 md:pb-8">
 	<a
 		target="_blank"
 		class="p-1 transition-colors hover:text-primary-500"
@@ -161,7 +161,7 @@
 		class="p-1 transition-colors hover:text-primary-500"
 		href="https://dev.to/nasheomirro"
 	>
-		<span class="sr-only">check my Github</span>
+		<span class="sr-only">check my Dev.to profile</span>
 		<div class="w-8 md:w-9">
 			<Dev />
 		</div>
