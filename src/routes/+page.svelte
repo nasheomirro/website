@@ -1,38 +1,25 @@
 <script lang="ts">
-	import HeaderImage from '$lib/components/HeaderImage.svelte';
-	import NavMenu from '$lib/components/NavMenu.svelte';
-	import AboutImage from '$lib/components/AboutImage.svelte';
-	import ProjectItem from '$lib/components/ProjectItem.svelte';
-	import Github from '$lib/icons/Github.svelte';
-	import Linkedin from '$lib/icons/Linkedin.svelte';
-	import Dev from '$lib/icons/Dev.svelte';
-	import { onMount } from 'svelte';
+	import GridBackground from '$lib/components/GridBackground.svelte';
+	import HomeHeader from '$lib/home/HomeHeader.svelte';
+	import AboutSection from '$lib/home/AboutSection.svelte';
+	import { useTransitionIn } from '$lib/utils';
 
-	onMount(() => {
-		const elements = document.querySelectorAll('[data-animate-in]');
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						entry.target.classList.remove('before-visible-left', 'before-visible-right');
-					}
-				});
-			},
-			{ threshold: [0.5] }
-		);
-
-		elements.forEach((element) => {
-			observer.observe(element);
-		});
-	});
+	useTransitionIn();
 </script>
 
-<section id="header">
+<GridBackground />
+<HomeHeader />
+<AboutSection />
+
+<!-- <section id="header">
 	<NavMenu />
 	<div class="py-20 md:py-28 centered">
 		<div class="grid items-center grid-cols-1 gap-4 sm:px-4 md:grid-cols-2">
-			<div class="max-w-xs row-start-2 sm:max-w-sm md:row-start-1">
-				<h1 class="mb-8 h1">Hi, I'm Shane Rimoro, A Web Developer</h1>
+			<div data-animate-in class="before-visible-left transition duration-700 max-w-xs row-start-2 sm:max-w-sm md:row-start-1">
+				<h1 class="mb-8 h1">
+					Hi, I'm Shane Rimoro, A
+					<span class=""> Web Developer.</span>
+				</h1>
 				<p class="mb-5">
 					I convert time, energy, and a little bit of caffeine into responsive and fully functioning
 					web applications.
@@ -48,7 +35,7 @@
 					<span> Check My Github </span>
 				</a>
 			</div>
-			<div data-animate-in class="before-visible-right transition duration-300 flex justify-end">
+			<div data-animate-in class="before-visible-right transition delay-500 duration-700 flex justify-end">
 				<div class="max-w-md grow text-primary-500 md:max-w-none">
 					<HeaderImage />
 				</div>
@@ -166,4 +153,4 @@
 			<Dev />
 		</div>
 	</a>
-</div>
+</div> -->

@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 @layer components {
+	.centered {
+		@apply w-full max-w-screen-xl px-6 mx-auto sm:px-8;
+	}
+
 	.h1 {
-		@apply text-3xl font-bold sm:text-4xl lg:text-5xl;
+		@apply text-3xl md:text-4xl leading-tight font-semibold;
 	}
 
 	.h2 {
-		@apply text-xl font-bold sm:text-2xl md:text-4xl;
+		@apply text-2xl md:text-3xl leading-tight font-bold;
 	}
 
 	.h3 {
 		@apply text-lg font-bold sm:text-xl md:text-3xl;
 	}
 
-	.centered {
-		@apply max-w-screen-xl px-6 mx-auto sm:px-8;
-	}
-
 	.button {
-		@apply px-4 flex items-center gap-2 py-1.5 font-semibold border rounded-full hover:brightness-110 border-surface-800 relative overflow-hidden;
+		@apply shadow px-4 flex items-center gap-2 py-1.5 font-semibold rounded-full hover:brightness-110 relative overflow-hidden;
 	}
 	.button {
 		@apply after:absolute after:w-full after:left-0 after:top-0 after:h-full after:bg-opacity-10 after:bg-white after:translate-x-full hover:after:translate-x-0 after:transition-transform;
@@ -31,16 +31,32 @@
 	.before-visible-left {
 		@apply -translate-x-10 opacity-0;
 	}
-
 	.before-visible-right {
 		@apply translate-x-10 opacity-0;
 	}
+  .before-visible-bottom {
+    @apply translate-y-10 opacity-0;
+  }
+  .before-visible-bottom-shrink {
+    @apply translate-y-10 opacity-0 scale-110;
+  }
+}
+
+@font-face {
+	font-family: 'Hanken Grotesk';
+	src: url('/fonts/hanken-grot.ttf');
+}
+
+:root {
+	color-scheme: only light;
 }
 
 html,
 body {
+	font-family: 'Hanken Grotesk', sans-serif;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+  height: 100%;
 }
 
 /* TODO */
@@ -53,46 +69,36 @@ body {
 } */
 
 body {
-	background-repeat: no-repeat;
-	background: radial-gradient(
-			ellipse farthest-corner at 100% 0%,
-			rgba(159, 70, 255, 0.23) 0%,
-			rgba(0, 0, 0, 0) 42%
+	background-attachment: fixed;
+	background-image: radial-gradient(
+			ellipse farthest-corner at 84.14% 0%,
+			rgba(180, 216, 255, 0.56) 0%,
+			rgba(0, 0, 0, 0) 20%
 		),
 		radial-gradient(
-			circle farthest-side at 100% 74.29%,
-			rgba(255, 166, 159, 0.3) 0%,
-			rgba(187, 173, 255, 0) 50%
+			ellipse farthest-corner at 40.86% 0%,
+			rgba(214, 178, 255, 0.69) 0%,
+			rgba(0, 0, 0, 0) 49%
 		),
 		radial-gradient(
-			ellipse farthest-corner at 0% 96.28%,
-			rgba(22, 255, 37, 0.16) 0%,
-			rgba(0, 0, 0, 0) 63%
-		),
-		radial-gradient(
-			circle farthest-corner at 0% 0%,
-			rgba(251, 132, 72, 0.21) 0%,
-			rgba(0, 0, 0, 0) 44%
+			circle farthest-corner at 15.11% 0%,
+			rgba(255, 145, 145, 0.36) 0%,
+			rgba(0, 0, 0, 0) 20%
 		);
-	@apply bg-surface-100;
+	background-color: theme(colors.surface.100);
 }
 
-@media (max-width: 768px) {
+@media (max-width: calc(theme(screens.sm) - 1px)) {
 	body {
-		background: radial-gradient(
-				ellipse farthest-corner at 0% 0%,
-				rgba(159, 70, 255, 0.23) 0%,
-				rgba(0, 0, 0, 0) 69%
+		background-image: radial-gradient(
+				ellipse farthest-corner at 84.14% 0%,
+				rgba(180, 216, 255, 0.56) 0%,
+				rgba(0, 0, 0, 0) 40%
 			),
 			radial-gradient(
-				ellipse farthest-corner at 0% 100%,
-				rgba(22, 255, 37, 0.16) 0%,
-				rgba(0, 0, 0, 0) 63%
-			),
-			radial-gradient(
-				ellipse farthest-corner at 100% 47.34%,
-				rgba(251, 132, 72, 0.2) 0%,
-				rgba(0, 0, 0, 0) 65%
+				ellipse farthest-corner at 30% 0%,
+				rgba(214, 178, 255, 0.69) 0%,
+				rgba(0, 0, 0, 0) 49%
 			);
 	}
 }

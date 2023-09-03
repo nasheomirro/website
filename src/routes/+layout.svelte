@@ -1,9 +1,15 @@
 <script lang="ts">
-  import "../app.css";
+	import NavMenu from '$lib/components/NavMenu.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+  import '../app.css';
 </script>
 
 <svelte:head>
-  <title>Shane Rimoro - Web Dev</title>
+	<title>Shane Rimoro - Web Dev</title>
 </svelte:head>
 
-<slot />
+<div class="flex flex-col h-full w-full items-stretch">
+	<NavMenu />
+	<slot />
+	<Footer />
+</div>
