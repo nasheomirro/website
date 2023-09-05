@@ -1,7 +1,6 @@
 <script>
 	import Book from '$lib/icons/Book.svelte';
 	import Lightbulb from '$lib/icons/Lightbulb.svelte';
-	import NavLogo from '$lib/icons/NavLogo.svelte';
 	import Pen from '$lib/icons/Pen.svelte';
 	import { useTransitionIn } from '$lib/utils';
 	import AboutItem from './AboutItem.svelte';
@@ -10,7 +9,7 @@
 </script>
 
 <section>
-	<ul class="py-14 centered grid-cols-1 sm:grid-cols-3 grid gap-6 md:gap-12">
+	<ul class="py-14 centered grid-cols-1 sm:grid-cols-3 grid gap-12">
 		<AboutItem id="a1" class="">
 			<Book slot="icon" />
 			<svelte:fragment slot="title">Learning Enjoyer</svelte:fragment>
