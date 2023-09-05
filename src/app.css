@@ -55,19 +55,8 @@ html,
 body {
 	font-family: 'Hanken Grotesk', sans-serif;
 	height: 100%;
+	width: 100%;
 }
-
-body {
-	overflow-x: hidden;
-}
-/* TODO */
-/* ::-webkit-scrollbar-thumb {
-  @apply bg-surface-600 rounded-full;
-}
-
-::-webkit-scrollbar {
-  @apply bg-surface-300;
-} */
 
 body {
 	background-attachment: fixed;

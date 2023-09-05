@@ -9,11 +9,13 @@
 	<title>Shane Rimoro - Web Dev</title>
 </svelte:head>
 
-<GridBackground />
-<div class="flex flex-col h-full w-full items-stretch">
-	<NavMenu />
-	<div class="grid">
-		<slot />
+<div class="w-full overflow-x-hidden">
+	<GridBackground />
+	<div class="flex flex-col h-full w-full items-stretch">
+		<NavMenu />
+		<div class="grid">
+			<slot />
+		</div>
+		<Footer />
 	</div>
-	<Footer />
 </div>
