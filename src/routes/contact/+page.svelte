@@ -17,16 +17,20 @@
 				information below, and I'll get back to you as soon as possible. I look forward to hearing
 				from you!
 			</p>
-			<ul
-				class="grid grid-cols-1 sm:grid-cols-2 gap-8"
-			>
-				<li id="item-1" class="before-visible-bottom-shrink transition duration-500 delay-300 space-y-2 flex flex-col justify-start">
+			<ul class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+				<li
+					id="item-1"
+					class="before-visible-bottom-shrink transition duration-500 delay-300 space-y-2 flex flex-col items-start"
+				>
 					<span class="text-lg text-surface-800">My Email</span>
 					<a href="mailto:shanenescarimoro@gmail.com" class="text-lg font-light hover:underline"
 						>shanenescarimoro@gmail.com</a
 					>
 				</li>
-				<li id="item-2" class="before-visible-bottom-shrink transition duration-500 delay-500  space-y-2 flex flex-col justify-start">
+				<li
+					id="item-2"
+					class="before-visible-bottom-shrink transition duration-500 delay-500 space-y-2 flex flex-col items-start"
+				>
 					<span class="text-lg text-surface-800">On Linkedin</span>
 					<a
 						href="https://www.linkedin.com/in/shane-rimoro-413aa523b/"
