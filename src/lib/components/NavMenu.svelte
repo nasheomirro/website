@@ -19,13 +19,8 @@
 			isActive: false
 		},
 		{
-			text: 'About',
-			href: '/about',
-			isActive: false
-		},
-		{
-			text: 'Projects',
-			href: '/projects',
+			text: 'Contact',
+			href: '/contact/',
 			isActive: false
 		}
 	];
@@ -56,7 +51,7 @@
 							on:click={() => (showMenu = !showMenu)}
 							class={join(
 								'block w-full p-2 sm:transition font-light sm:px-4 sm:hover:bg-primary-500 sm:rounded-full',
-								link.isActive ? 'sm:scale-105' : ''
+								link.isActive ? 'sm:font-bold' : ''
 							)}>{link.text}</a
 						>
 					</li>

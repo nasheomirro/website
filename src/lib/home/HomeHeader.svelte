@@ -14,7 +14,7 @@
 					Hi, I'm Shane Rimoro, A
 					<span class=""> Web Developer.</span>
 				</h1>
-				<p class="mb-6">
+				<p class="mb-6 font-light">
 					I convert time, energy, and a little bit of caffeine into responsive and fully functioning
 					web applications.
 				</p>

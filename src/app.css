@@ -34,12 +34,12 @@
 	.before-visible-right {
 		@apply translate-x-10 opacity-0;
 	}
-  .before-visible-bottom {
-    @apply translate-y-10 opacity-0;
-  }
-  .before-visible-bottom-shrink {
-    @apply translate-y-10 opacity-0 scale-110;
-  }
+	.before-visible-bottom {
+		@apply translate-y-10 opacity-0;
+	}
+	.before-visible-bottom-shrink {
+		@apply translate-y-10 opacity-0 scale-110;
+	}
 }
 
 @font-face {
@@ -54,11 +54,12 @@
 html,
 body {
 	font-family: 'Hanken Grotesk', sans-serif;
-	scroll-behavior: smooth;
-	overflow-x: hidden;
-  height: 100%;
+	height: 100%;
 }
 
+body {
+	overflow-x: hidden;
+}
 /* TODO */
 /* ::-webkit-scrollbar-thumb {
   @apply bg-surface-600 rounded-full;

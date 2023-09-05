@@ -1,15 +1,19 @@
 <script lang="ts">
 	import NavMenu from '$lib/components/NavMenu.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-  import '../app.css';
+	import GridBackground from '$lib/components/GridBackground.svelte';
+	import '../app.css';
 </script>
 
 <svelte:head>
 	<title>Shane Rimoro - Web Dev</title>
 </svelte:head>
 
+<GridBackground />
 <div class="flex flex-col h-full w-full items-stretch">
 	<NavMenu />
-	<slot />
+	<div class="grid">
+		<slot />
+	</div>
 	<Footer />
 </div>

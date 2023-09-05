@@ -1,15 +1,17 @@
 <script lang="ts">
-	import GridBackground from '$lib/components/GridBackground.svelte';
+	import AboutMore from '$lib/home/AboutMore.svelte';
+	import AboutSummary from '$lib/home/AboutSummary.svelte';
 	import HomeHeader from '$lib/home/HomeHeader.svelte';
-	import AboutSection from '$lib/home/AboutSection.svelte';
+	import ProjectSection from '$lib/home/ProjectSection.svelte';
 	import { useTransitionIn } from '$lib/utils';
 
 	useTransitionIn();
 </script>
 
-<GridBackground />
 <HomeHeader />
-<AboutSection />
+<AboutSummary />
+<AboutMore />
+<ProjectSection />
 
 <!-- <section id="header">
 	<NavMenu />

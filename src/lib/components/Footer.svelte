@@ -4,20 +4,18 @@
 </script>
 
 <footer class="mt-auto pt-40">
-	<div
-		class="relative text-surface-800 bg-white bg-opacity-40 border-t border-t-surface-300 py-20"
-	>
+	<div class="relative text-surface-800 bg-white bg-opacity-40 border-t border-t-surface-300 py-20">
 		<GridFooterBackground />
 		<div class="footer-inner centered">
 			<div class="w-14">
 				<NavLogo />
 			</div>
 			<div class="max-w-md lg:max-w-xl">
-				<p class="mb-6 md:mb-10">
+				<p class="mb-6 md:mb-10 font-light">
 					Have questions or interested in collaborating on web development projects? Don't hesitate
 					to get in touch with me – I'd love to hear from you!
 				</p>
-				<a href="/contact" class="button max-w-fit py-3 px-5 bg-surface-900 text-white shadow-xl"
+				<a href="/contact/" class="button max-w-fit py-3 px-5 bg-surface-900 text-white shadow-xl"
 					>Get in touch</a
 				>
 			</div>
