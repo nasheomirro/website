@@ -28,17 +28,19 @@
 }
 
 @layer utilities {
-	.before-visible-left {
-		@apply -translate-x-10 opacity-0;
-	}
-	.before-visible-right {
-		@apply translate-x-10 opacity-0;
-	}
-	.before-visible-bottom {
-		@apply translate-y-10 opacity-0;
-	}
-	.before-visible-bottom-shrink {
-		@apply translate-y-10 opacity-0 scale-110;
+	@media (prefers-reduced-motion: no-preference) {
+		.before-visible-left {
+			@apply -translate-x-10 opacity-0;
+		}
+		.before-visible-right {
+			@apply translate-x-10 opacity-0;
+		}
+		.before-visible-bottom {
+			@apply translate-y-10 opacity-0;
+		}
+		.before-visible-bottom-shrink {
+			@apply translate-y-10 opacity-0 scale-110;
+		}
 	}
 }
 
