@@ -21,7 +21,7 @@
 >
 	<div
 		id={`proj-${i}-img`}
-		class="before-visible-bottom-shrink transition duration-700 p-2 md:p-3 w-full max-w-2xl md:max-w-3xl bg-surface-200 rounded-lg bg-opacity-80 backdrop-blur-lg shadow-lg"
+		class="before-visible-bottom-shrink transition duration-700 p-2 md:p-3 max-w-2xl md:max-w-3xl bg-surface-200 rounded-lg bg-opacity-80 backdrop-blur-lg shadow-lg"
 	>
 		<img class="rounded" {src} {alt} />
 	</div>

@@ -39,7 +39,13 @@
 			@apply translate-y-10 opacity-0;
 		}
 		.before-visible-bottom-shrink {
-			@apply translate-y-10 opacity-0 scale-110;
+			opacity: 0;
+			/* 
+        for some reason in the blink engine, transitioning from scaleX and 
+        scaleY causes performance issues, tailwind uses scaleX and scaleY so we 
+        have to use scale() instead which does not cause frame drops.
+       */
+			transform: translateY(2.5rem) scale(1.1);
 		}
 	}
 }
